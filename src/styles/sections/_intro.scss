@@ -1,0 +1,39 @@
+#intro{
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 6rem;
+}
+
+#intro_jumbotron{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+#intro-logo{
+    position: absolute;
+    width: 40vmax;
+    z-index: 1;
+}
+#intro-content{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
+}
+#intro_jumbotron_name{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10rem;
+    margin: 0rem;
+    text-shadow: 0.2rem 0.2rem 0.5rem rgba(0,0,0,.8);
+    text-transform: uppercase;
+}
+#intro_jumbotron_desc{
+    font-size: 3.2rem;
+    font-weight: 300;
+    margin: 0rem 0rem 0rem auto;
+    text-shadow: 0.2rem 0.2rem 0.5rem rgba(0,0,0,.8);
+}
