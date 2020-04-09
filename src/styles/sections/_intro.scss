@@ -13,6 +13,12 @@
     justify-content: center;
     position: relative;
 }
+#intro_canvas{
+    position: absolute;
+    top: 0rem;
+    left: 0rem;
+    z-index: 1;
+}
 #intro-logo{
     position: absolute;
     width: 40vmax;

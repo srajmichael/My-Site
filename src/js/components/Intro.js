@@ -2,6 +2,7 @@ import React from 'react';
 
 const Intro = () => (
     <section id='intro' className='section-padding-y'>
+        <canvas id='intro_canvas'></canvas>
         <div id='intro_jumbotron'>
             <div id='intro-content'>
                 <h2 id='intro_jumbotron_name'>Michael Sraj</h2>
