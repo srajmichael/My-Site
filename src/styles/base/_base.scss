@@ -1,12 +1,14 @@
 *{ box-sizing: border-box; }
 html{
     font-size: 62.5%;
-    background: $black;
     font-family: 'Oswald', sans-serif;
 }
 body{
-    font-size: 1.6rem;
+    background: $black;
+    font-size: 1.8rem;
+    transition: all 800ms ease;
 }
+
 
 a{
     color: $blue;
@@ -20,9 +22,14 @@ section{
     min-height: 100vh;
 }
 
-.section-padding-y{
-    padding-top: $l-size;
-    padding-bottom: $l-size;
+.section-padding-y-l{
+    padding-top: $s-size;
+    padding-bottom: $s-size;
+}
+
+.section-padding-y-xl{
+    padding-top: $s-size;
+    padding-bottom: $s-size;
 }
 
 .oswald{
@@ -31,4 +38,142 @@ section{
 
 .montserrat{
     font-family: 'Montserrat', sans-serif;
+}
+
+#app-wrap{
+    background: transparent;
+    color: #fff;
+    transition: all 500ms ease;
+}
+#app-wrap.app-white{
+    background: $off-white;
+    color: $black;
+}
+
+.section-headline{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-headline hr{
+    border: 0rem;
+    border-bottom: .5rem solid $blue-lite;
+    flex-grow: 1;
+    margin: 0rem 5rem;
+}
+
+.section-headline h2{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 4.2rem;
+    text-transform: uppercase;
+}
+
+.arrow-left, .arrow-right{
+    display: inline-flex;
+    flex-direction: column;
+    height: 1em;
+    width: .7em;
+}
+.arrow-left::before,.arrow-left::after, .arrow-right::before, .arrow-right::after{
+    content: '';
+    background: black;
+    height: 50%;
+    width: 100%;
+}
+.arrow-left::after,.arrow-right::after{
+    margin-top: -.5px;
+}
+.arrow-left::before,.arrow-right::after{
+    transform: skewX(-42deg);
+}
+.arrow-left::after, .arrow-right::before{
+    transform: skewX(42deg);
+}
+.arrow-left,.arrow-right{
+    margin-right: .3em;
+    margin-left: .3em;
+}
+
+.header-arrow-left{
+    display: flex;
+    min-height: 100%;
+    width: 6rem;
+}
+.header-arrow-left::before{
+    content: '';
+    background: black;
+    height: 50%;
+}
+.header-arrow-left::after{
+    content: '';
+    background: black;
+    height: 50%;
+}
+
+.section-title{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3.2rem;
+    padding: 0rem $xs-size;
+    text-align: center;
+}
+
+
+@media(min-width: $xs-screen){
+    .section-padding-y-xl{
+        padding-top: $m-size;
+        padding-bottom: $m-size;
+    }
+    .section-title{
+        font-size: 4.2rem;
+    }
+}
+
+@media(min-width: $sm-screen){
+    .section-title{
+        padding: 0rem $s-size;
+    }
+}
+
+@media(min-width: $m-screen){
+    .section-title{
+        font-size: 5.6rem;
+        max-width:100rem;
+        margin: 0rem auto;
+        padding: 0rem $s-size;
+    }
+    .section-padding-y-l{
+        padding-top: $m-size;
+        padding-bottom: $m-size;
+    }
+    
+    .section-padding-y-xl{
+        padding-top: $l-size;
+        padding-bottom: $l-size;
+    }
+}
+
+@media(min-width: $l-screen){
+    .section-title{
+        max-width: 120rem;
+    }
+    .section-padding-y-l{
+        padding-top: $l-size;
+        padding-bottom: $l-size;
+    }
+    
+    .section-padding-y-xl{
+        padding-top: $xl-size;
+        padding-bottom: $xl-size;
+    }
+}
+
+
+
+
+
+@media(min-width: $xl-screen){
+    html{
+        font-size: 1vmin;
+    }
 }

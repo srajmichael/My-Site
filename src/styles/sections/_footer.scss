@@ -1,0 +1,28 @@
+footer{
+    background: $primary-lite;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: $xs-size $s-size;
+}
+
+footer .social-container{
+    display: flex;
+}
+footer .social-container a{
+    color: #fff;
+    font-size: 3.2rem;
+    margin: .5rem;
+    padding: .5rem;
+}
+
+footer .social-container a:hover{
+    color: $black;
+}
+
+@media(min-width: $sm-screen){
+    footer{
+        flex-direction: row;
+    }
+}

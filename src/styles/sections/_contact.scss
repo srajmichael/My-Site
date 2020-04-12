@@ -1,0 +1,79 @@
+#contact{
+    background: linear-gradient(to bottom, rgba(10, 9, 9, 1), transparent 30rem), url(/images/contactbg2.png);
+    background-size: cover;
+    background-position: center;
+}
+#contact-form{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0rem auto;
+    padding: $xs-size;
+    width: 100%;
+}
+
+.contact-form-row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: $xs-size;
+    width: 100%;
+}
+.contact-form-row .input-container:nth-child(2){
+    margin-top: $xs-size;
+}
+
+.input-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+
+.input-container.name, .input-container.email{
+    width: 100%;
+}
+.input-container.message{
+    width: 100%;
+}
+.input-container.submit{
+
+}
+
+.contact-form-row label{
+    margin-bottom: .6rem;
+}
+
+
+.contact-form-row input:not([type='submit']), .contact-form-row textarea{
+    background-color: #222;
+    border: .2rem solid #444;
+    border-radius: .5rem;
+    padding: .5rem;
+    width: 100%;
+}
+.contact-form-row textarea{
+    min-height: 20rem;
+}
+.contact-submit-wrapper::before{
+    content: '';
+    min-width: 2rem;
+    min-height: 2rem;
+    background: $primary;
+}
+
+
+@media(min-width: $sm-screen){
+    #contact-form{
+        max-width: 80rem;
+        padding: $m-size;
+    }
+    .input-container.name, .input-container.email{
+        width: calc(50% - 1.6rem);
+    }
+    .contact-form-row .input-container:nth-child(2){
+        margin-top: 0rem;
+    }
+}
+

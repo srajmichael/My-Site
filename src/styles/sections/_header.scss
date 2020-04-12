@@ -1,4 +1,5 @@
 header{
+    background: transparent;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -6,32 +7,89 @@ header{
     padding: 1.6rem 3.2rem;
     position: fixed;
     top: 0rem;
+    transition: background-color 800ms ease;
     width: 100%; 
-    z-index: 99;
+    z-index: 90;
 }
 
+
 #main-nav{
+    background: rgba(194, 48, 48, .7);
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     list-style: none;
+    position: absolute;
+    height: 0rem;
+    left: 0rem;
+    top: 100%;
+    width: 100%;
     margin: 0 auto;
     padding-left: 0rem;
+    overflow: hidden;
+    transition: height 600ms ease;
 }
 
 #main-nav>li{
-    padding: .8rem;
+    padding: .4rem;
+    width: 100%;
 }
 
+.app-white #main-nav>li>a{
+    text-shadow: 0.2rem 0.2rem 0.5rem rgba(0, 0, 0, 0.8);
+}
+#main-nav>li:not(:last-child){
+    border-bottom: .2rem solid rgba(0,0,0,.3);
+}
 #main-nav>li>a{
     color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 2.4rem;
     padding: .8rem;
     text-decoration: none;
     text-transform: uppercase;
-    transition: all 500ms ease-in-out;
+    transition: text-shadow 800ms ease;
 }
 #main-nav>li>a:hover{
-    color: $blue;
+    color: $primary;
+}
 
+#nav-toggler{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: .6rem;
+    min-height: 4rem;
+    min-width: 4rem;
+    margin-left: auto;
+}
+
+#nav-toggler p{
+    background: #fff;
+    box-shadow: 0rem 0rem .5rem rgba(0,0,0,.6);
+    height: .3rem;
+    margin: auto;
+    width: 100%;
+}
+
+@media(min-width: $sm-screen){
+    #nav-toggler{
+        display: none;
+    }
+    #main-nav{
+        background: none;
+        flex-direction: row;
+        position: relative;
+        height: unset;
+        left: unset;
+        top: unset;
+        width: unset;
+    }
+    #main-nav>li:not(:last-child){
+        border-bottom: none;
+    }
 }

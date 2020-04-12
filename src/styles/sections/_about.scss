@@ -1,0 +1,144 @@
+#about-list{
+    background: $blue;
+    color: #fff;
+    padding: $s-size;
+}
+.about-content-container{
+    display: flex;
+    flex-direction: column;
+    margin: 0rem auto;
+    max-width: 120rem;
+    padding: 0rem $xs-size;
+}
+
+.about-header{
+    align-items: center;
+    border-bottom: 0.5rem solid $primary;
+    display: flex;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3.2rem;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    padding: 0rem 2rem;
+}
+
+
+.about-header-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2.4rem;
+    position: relative;
+}
+.app-white .about-header-container{
+    border-right: .5rem solid $primary;
+}
+.about-skillset{
+    background: $primary;
+    padding: $s-size;
+}
+.about-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0rem;
+    position: relative;
+    width: 100%;
+}
+.about-content h3{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 2.8rem;
+    margin: 0rem 0rem 1.6rem;
+    width: 100%;
+}
+.about-content h3:not(:first-child){
+    margin-top: 3.2rem;
+}
+.about-content .arrow-left, .about-content .arrow-right{
+    margin: 0rem;
+}
+.about-content .arrow-left::before, .about-content .arrow-left::after,.about-content .arrow-right::before, .about-content .arrow-right::after{
+    background: $primary;
+    
+}
+.app-white .about-content .arrow-left::before, 
+.app-white .about-content .arrow-left::after,
+.app-white .about-content .arrow-right::before, 
+.app-white .about-content .arrow-right::after{
+    background: $primary;
+}
+
+.about-content p{
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+    text-align: center;
+}
+
+#about{
+    background-image: linear-gradient(to bottom, rgba(10, 9, 9, 1), rgba(10, 9, 9, 1) 30rem, transparent , transparent calc(100% - 30rem), rgba(10, 9, 9, 1)), url(/images/mounts.png);
+    background-size: cover;
+}
+
+@media(min-width: $xs-screen){
+    .about-content-container{
+        padding: 0rem $s-size;
+    }
+    .about-header{
+        font-size: 5.6rem;
+    }
+    .about-content .arrow-left, .about-content .arrow-right{
+        margin: auto 1.4em;
+    }
+    .about-content h3{
+        font-size: 3.2rem;
+        justify-content: center;
+    }
+}
+
+
+
+
+@media(min-width: $sm-screen){
+    .about-content-container{
+        flex-direction: row;
+    }
+    .about-header-container{
+        border-right: 0.5rem solid #c23030;
+        height: 56rem;
+        margin-bottom: unset;
+        width: 10rem;
+    }
+    .about-header{
+        border-bottom: none;
+        font-size: 7.2rem;
+        height: 7rem;
+        left: -24rem;
+        position: absolute;
+        top: 24.5rem;
+        transform: rotateZ(-90deg);
+        width: 56rem;
+    }
+    .about-content{
+        padding: 0rem 0rem 0rem $s-size;
+    }
+}
+
+@media(min-width: $m-screen){
+    .about-content{
+        padding: 0rem 0rem 0rem $l-size;
+    }
+    .about-content h3{
+        font-size: 4.2rem;
+    }
+    .about-content p{
+        font-size: 2.2rem;
+        line-height: 2.8rem;
+    }
+    .about-content .arrow-left, .about-content .arrow-right{
+        margin: auto 2.4em;
+    }
+}

@@ -3,7 +3,24 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
     padding-top: 6rem;
+    position: relative;
+}
+
+#intro::after{
+    content: '';
+    background: linear-gradient(to bottom, rgba(15, 3, 4,0), rgba(15, 3, 4,1) 90%);
+    bottom: 0;
+    height: 10rem;
+    left: 0;
+    position: absolute;
+    transition: all 5000ms ease-in-out;
+    width: 100%;
+    z-index: 2;
+}
+.app-white #intro::after{
+    background: linear-gradient(to bottom, rgba(247, 251, 252,0), rgba(247, 251, 252,1) 90%);
 }
 
 #intro_jumbotron{
@@ -21,25 +38,46 @@
 }
 #intro-logo{
     position: absolute;
-    width: 40vmax;
+    width: 70vmin;
     z-index: 1;
 }
 #intro-content{
     display: flex;
     flex-direction: column;
     position: relative;
-    z-index: 2;
+    z-index: 3;
 }
 #intro_jumbotron_name{
     font-family: 'Montserrat', sans-serif;
-    font-size: 10rem;
+    font-size: 3.4rem;
     margin: 0rem;
     text-shadow: 0.2rem 0.2rem 0.5rem rgba(0,0,0,.8);
     text-transform: uppercase;
 }
 #intro_jumbotron_desc{
-    font-size: 3.2rem;
+    font-size: 2rem;
     font-weight: 300;
-    margin: 0rem 0rem 0rem auto;
+    margin: 0rem auto;
     text-shadow: 0.2rem 0.2rem 0.5rem rgba(0,0,0,.8);
+}
+
+
+
+@media(min-width: $sm-screen){
+    #intro_jumbotron_name{
+        font-size: 8rem;
+    }
+    #intro_jumbotron_desc{
+        font-size: 2.4rem;
+        margin: 0rem 0rem 0rem auto;
+    }
+}
+
+@media(min-width: $m-screen){
+    #intro_jumbotron_name{
+        font-size: 10rem;
+    }
+    #intro_jumbotron_desc{
+        font-size: 3.2rem;
+    }
 }
