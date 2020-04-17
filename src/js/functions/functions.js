@@ -21,8 +21,6 @@ const smoothScroll = (event, identifier) => {
 
 
 
-
-
 module.exports = {
     randomBetween,
     smoothScroll

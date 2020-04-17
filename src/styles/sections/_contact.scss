@@ -2,12 +2,13 @@
     background: linear-gradient(to bottom, rgba(10, 9, 9, 1), transparent 30rem), url(/images/contactbg2.png);
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
 }
 #contact-form{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin: 0rem auto;
     padding: $xs-size;
     width: 100%;
 }
@@ -47,11 +48,21 @@
 
 
 .contact-form-row input:not([type='submit']), .contact-form-row textarea{
+    color: #fff;
     background-color: #222;
     border: .2rem solid #444;
     border-radius: .5rem;
     padding: .5rem;
     width: 100%;
+}
+.contact-form-row input[type='submit']{
+    background: $primary-lite;
+    color: $black;
+    border: none;
+    padding: 1.2rem 2.4rem;
+    font-size: 2.2rem;
+    box-shadow: .2rem .2rem .8rem rgba(0,0,0,.5);
+    text-transform: capitalize;
 }
 .contact-form-row textarea{
     min-height: 20rem;
@@ -64,10 +75,105 @@
 }
 
 
+.fade-exit{
+    opacity: 1
+}
+
+.fade-exit.fade-exit-active{
+    opacity: 0;
+    transition: opacity 400ms linear;
+}
+.fade-exit-done{
+    opacity: 0;
+}
+.fade-appear{
+    opacity: 0;
+}
+.fade-appear.fade-appear-active{
+    opacity: 1;
+    transition: opacity 400ms linear;
+}
+.fade-enter{
+    opacity: 0;
+}
+.fade-enter.fade-enter-active{
+    opacity: 1;
+    transition: opacity 400ms linear;
+}
+.contact-form-wrap{
+    width: 100%;
+    padding: $xs-size;
+    position: relative;
+    margin: 0rem auto;
+}
+.benny{position: relative}
+.contact-message-enter{
+    opacity: 0;
+    position: absolute;
+    margin: 0 auto;
+    text-align: center;
+    top: $xs-size;
+    left: 0;
+    right: 0;
+}
+.contact-message-enter.contact-message-enter-active{
+    opacity: 1;
+    transition: opacity 8000ms linear;
+    text-align: center;
+}
+.contact-message-enter-done{
+    position: relative;
+    text-align: center;
+}
+#form-success{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: $s-size;
+    padding: $xs-size;
+    width: 100%;
+    height: 54rem;
+}
+
+#submitting-img{
+    width: 6rem;
+    position: absolute;
+    top: calc(50% - 3rem);
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    animation-name: spin;
+    animation-duration: 1000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    z-index: 9;
+}
+
+@keyframes spin{
+    0%{
+        transform: rotateZ(0deg);
+    }
+    50%{
+        transform: rotateZ(180deg);
+    }
+    100%{
+        transform: rotateZ(360deg);
+    }
+
+}
+
+
+
 @media(min-width: $sm-screen){
-    #contact-form{
+    #form-success{
+        height: 39.2rem;
+    }
+    .contact-form-wrap{
         max-width: 80rem;
         padding: $m-size;
+    }
+    .contact-message-enter{
+        top: $m-size;
     }
     .input-container.name, .input-container.email{
         width: calc(50% - 1.6rem);

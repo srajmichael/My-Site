@@ -79,8 +79,10 @@
 }
 
 #about{
-    background-image: linear-gradient(to bottom, rgba(10, 9, 9, 1), rgba(10, 9, 9, 1) 30rem, transparent , transparent calc(100% - 30rem), rgba(10, 9, 9, 1)), url(/images/mounts.png);
+    background-image: linear-gradient(to bottom, rgba(10, 9, 9, 1), rgba(10, 9, 9, 1) 30rem, transparent , transparent calc(100% - 30rem), rgba(10, 9, 9, 1)), url(/images/mounts.jpg);
     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 @media(min-width: $xs-screen){
